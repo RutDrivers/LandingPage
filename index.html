@@ -3,26 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rut Driver's, LLC</title>
+  <title>Rut Drivers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #ec5f28;
+    }
     body {
-      font-family: sans-serif;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #333;
       text-align: center;
-      padding: 4rem;
-      background-color: #f3f3f3;
+      padding: 2rem;
+    }
+    header img {
+      width: 160px;
+      margin-bottom: 1rem;
     }
     h1 {
-      color: #333;
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    input[type="email"] {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 300px;
+      max-width: 90%;
+    }
+    button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
       color: #666;
     }
   </style>
 </head>
 <body>
-  <h1>Coming Soon</h1>
-  <p>We're building something awesome. Stay tuned.</p>
-  <p>Contact: rutdrviersllc@gmail.com</p>
+  <header>
+    <img src="logo.png" alt="RutDrivers Logo" />
+    <h1>The new way to move around Florida</h1>
+    <p>RutDrivers is the ride-sharing app that puts drivers first. Our mission is simple: <strong>we work for them, not the other way around</strong>.</p>
+  </header>
+
+  <form action="https://formsubmit.co/rutdriversllc@gmail.com" method="POST">
+    <input type="email" name="email" placeholder="Your email address" required>
+    <button type="submit">Notify me at launch</button>
+  </form>
+
+  <footer>
+    &copy; 2025 RutDrivers LLC. All rights reserved.
+  </footer>
 </body>
 </html>
