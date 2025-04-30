@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rut Drivers</title>
+  <title>RutDrivers - Florida Ride Sharing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -16,30 +16,41 @@
       font-family: 'Inter', sans-serif;
       background: #fff;
       color: #333;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 2rem;
+      text-align: center;
     }
     header img {
-      width: 160px;
+      width: 410px;
       margin-bottom: 1rem;
     }
     h1 {
       color: var(--primary-color);
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
     }
     p {
       font-size: 1.1rem;
       max-width: 600px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 1.5rem;
     }
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.5rem;
+      margin-bottom: 2rem;
     }
-    input[type="email"] {
+    input[type="email"], select {
       padding: 0.8rem;
       font-size: 1rem;
       border: 1px solid #ccc;
@@ -59,24 +70,46 @@
     button:hover {
       opacity: 0.9;
     }
+    .contact-info {
+      font-size: 1rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      color: #444;
+    }
     footer {
-      margin-top: 3rem;
+      text-align: center;
+      padding: 1.5rem;
       font-size: 0.9rem;
       color: #666;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="RutDrivers Logo" />
-    <h1>The new way to move around Florida</h1>
-    <p>RutDrivers is the ride-sharing app that puts drivers first. Our mission is simple: <strong>we work for them, not the other way around</strong>.</p>
-  </header>
+  <main>
+    <header>
+      <img src="Files/20250430_1140_Logo en Naranja Intenso_remix_01jt3nnb50fnz9pb88369vyvw0 (1).png" alt="RutDrivers Logo" />
+      <h1>The new way to move around Florida</h1>
+      <p>RutDrivers is the ride-sharing app that puts drivers first. Our mission is simple: <strong>we work for them, not the other way around</strong>.</p>
+    </header>
 
-  <form action="https://formsubmit.co/rutdriversllc@gmail.com" method="POST">
-    <input type="email" name="email" placeholder="Your email address" required>
-    <button type="submit">Notify me at launch</button>
-  </form>
+    <p>If you'd like us to contact you about becoming a driver, partnering with RutDrivers, or using our services, please leave your email and select the subject below:</p>
+
+    <form action="https://formsubmit.co/rutdriversllc@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <select name="subject" required>
+        <option value="" disabled selected>I'm interested in...</option>
+        <option value="driver">Becoming a driver</option>
+        <option value="partner">Partnering with RutDrivers</option>
+        <option value="rider">Using the app as a rider</option>
+        <option value="other">Other inquiry</option>
+      </select>
+      <button type="submit">Contact Me</button>
+    </form>
+
+    <div class="contact-info">
+      <p>You can also email us directly at <a href="mailto:rutdriversllc@gmail.com">rutdriversllc@gmail.com</a></p>
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 RutDrivers LLC. All rights reserved.
